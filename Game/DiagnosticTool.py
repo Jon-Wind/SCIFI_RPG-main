@@ -10,5 +10,3 @@ class DiagnosticTool(StationItem):
         print(f"{self.description}")
 
 
-diagnostic_tool = DiagnosticTool("Diagnostic Tool", "This diagnostic tool seems designed to interface with maintenance droids")
-diagnostic_tool.examine()

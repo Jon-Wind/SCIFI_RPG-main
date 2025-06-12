@@ -10,5 +10,3 @@ class EnergyCrystal(StationItem):
         print(f"{self.description}")
 
 
-Crystal = EnergyCrystal("Energy Crystal", "This energy crystal seems to be a key to the docking bay.")
-Crystal.examine()

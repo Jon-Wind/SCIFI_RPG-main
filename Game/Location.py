@@ -13,26 +13,32 @@ class Location:
         self.exits[direction] = other_location
 
     def describe(self):
-        print(f'You are in the {self.name},  {self.description}')
+        start = f'\nYou are in the {self.name},'
         if self.has_tool:
-            print("You see a diagnostic tool here.")
+            start += " There is a diagnostic tool here. "
         if self.has_crystal:
-            print("You see an energy crystal here.")
+            start += " There is an energy crystal here. "
         if self.droid_present:
-            print("A maintenance droid blocks the way!")
+            start += "\nThere is also a maintenance droid blockings the way! "
+        
         
         # Add available exits
         if self.exits:
             exits = ", ".join(self.exits.keys())
-            print(f"Exits: {exits}.")
-
+            start += f"\n Exits: {exits}."
+        
+        print(f'{start}')
     def remove_tool(self):
         if self.has_tool:
             self.has_tool = False
+        if not self.has_tool:
+            print("There is no tool to pick up.")
 
     def remove_crystal(self):
         if self.has_crystal:
             self.has_crystal = False
+        if not self.has_crystal:
+            print("There is no crystal to pick up.")
 
     def set_droid_present(self):
         if self.droid_present:
