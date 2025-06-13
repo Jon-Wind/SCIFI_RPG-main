@@ -31,14 +31,14 @@ class Location:
     def remove_tool(self):
         if self.has_tool:
             self.has_tool = False
-        if not self.has_tool:
-            print("There is no tool to pick up.")
+            return True
+        return False
 
     def remove_crystal(self):
         if self.has_crystal:
             self.has_crystal = False
-        if not self.has_crystal:
-            print("There is no crystal to pick up.")
+            return True
+        return False
 
     def set_droid_present(self):
         if self.droid_present:

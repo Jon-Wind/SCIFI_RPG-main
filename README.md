@@ -1,7 +1,6 @@
-# SCIFI_RPG
-A simple RPG involving Sci Fi
+. Game Overview
+Your task is to build a minimal text-based RPG in Python. The player must follow a fixed “golden path” and earn points exactly as described below. If the player tries to move past the droid before it is repaired, a hazard counter increases. At the end, the game displays total score and hazards.
 
-This is a SCI FI RPG, Involving the player moving through a factility to achieve a Energy Crystal. This game uses OOP Principles.
 Golden Path Steps (in order):
 
 Maintenance Tunnels: Player begins here.

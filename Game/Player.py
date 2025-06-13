@@ -10,39 +10,46 @@ class Player:
         self.hazard_count = hazard_count
     
     def move(self, direction):
-        if direction in self.location.exits:
+        if direction in self.location.exits and not self.location.droid_present:
             self.location = self.location.exits[direction]
             print(f"You move {direction}.")
             self.location.describe()
+        elif self.location.droid_present:
+            print("The droid has blocked your path.")
+            self.location.describe()
+            self.hazard_count += 1
         else:
             print("You cannot move in that direction.")
 
-    def pick_up_tool():
-        if location.has_tool:
-            location.remove_tool()
+    def pick_up_tool(self):
+        if self.location.remove_tool():
             self.has_tool = True
             print("You have picked up the diagnostic tool.")
+            return True
+        print("There is no tool to pick up.")
+        return False
 
-    def use_tool_on_droid():
-        if has_tool and location.droid_present:
-            location.set_droid_present()
-            print("You have used the diagnostic tool on the droid.")
-        elif has_tool and not location.droid_present:
-            print("There is no droid to use the diagnostic tool on.")
-        else:
-            print("You do not have a diagnostic tool.")
+    def use_tool_on_droid(self):
+        if not self.has_tool:
+            print("You don't have the diagnostic tool.")
+            return False
+        if not hasattr(self.location, 'droid_present') or not self.location.droid_present:
+            print("There is no droid here to use the tool on.")
+            return False
+        self.location.droid_present = False
+        print("You use the diagnostic tool on the droid. It powers down!")
+        self.score += 20
+        return True
 
-    def pick_up_crystal():
-        if location.has_crystal:
-            location.remove_crystal()
+    def pick_up_crystal(self):
+        if self.location.remove_crystal():
             self.has_crystal = True
             print("You have picked up the energy crystal.")
+            self.score += 50
+            return True
+        print("There is no crystal to pick up.")
+        return False
 
-    def get_status():
-        print(f"Name: {self.name}")
-        print(f"Location Name: {self.location.name}")
-        print(f"Has Tool: {self.has_tool}")
-        print(f"Has Crystal: {self.has_crystal}")
-        print(f"Score: {self.score}")
-        print(f"Hazard Count: {self.hazard_count}")
+    def get_status(self):
+        return f"Score: {self.score} Hazards: {self.hazard_count}"
 
