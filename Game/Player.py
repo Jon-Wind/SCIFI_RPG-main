@@ -25,6 +25,7 @@ class Player:
         if self.location.remove_tool():
             self.has_tool = True
             print("You have picked up the diagnostic tool.")
+            self.score += 10
             return True
         print("There is no tool to pick up.")
         return False
