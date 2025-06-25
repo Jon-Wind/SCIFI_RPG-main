@@ -1,4 +1,5 @@
 from StationItem import StationItem
+"""Found in the Docking Bay and needed to win the game."""
 
 class EnergyCrystal(StationItem):
     def __init__(self, name, description):

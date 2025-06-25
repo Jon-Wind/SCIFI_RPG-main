@@ -1,4 +1,5 @@
-
+"""Droid in the maintenance tunnels that blocks the player.
+    Can be removed with the Diagnostic Tool."""
 
 class DamagedMaintenanceDroid:
     def __init__(self, blocking=True):

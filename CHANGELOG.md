@@ -1,29 +1,60 @@
 # Changelog
 
-## [Unreleased]
+## [0.4.0] - 2025-06-20
 
-### Major Changes
+### Added
+- **Code Analysis**
+  - Added comprehensive class relationship analysis
+  - Documented UML class diagram structure
+  - Added detailed class interaction documentation
+  - Included inheritance and composition relationships
 
-#### User Interface
-- **Added** console clearing functionality with 'clear' command
-- **Improved** screen layout with better visual separation
-- **Added** dynamic header showing current location
-- **Enhanced** command list display with better formatting
-- **Improved** status command output with visual separation
+### Documentation
+- **Class Relationships**
+  - Documented all core classes and their interactions
+  - Added detailed descriptions of class attributes and methods
+  - Included notes on game object composition
+  - Documented the game flow between different components
 
-#### Code Quality
-- **Added** comprehensive docstrings to all methods
-- **Improved** code organization and structure
-- **Added** detailed comments explaining game mechanics
-- **Enhanced** error handling and user feedback
+### Technical
+- **Code Structure**
+  - Analyzed and documented the object-oriented design
+  - Documented the game's architectural patterns
+  - Added notes on the game state management
+  - Included details on the command processing flow
 
-### Minor Changes
 
-#### Improvements
-- Updated welcome message formatting
-- Improved command prompt visibility
-- Added visual feedback for game state changes
-- Enhanced console output readability
+## [0.3.0] - 2025-06-19
+
+### Added
+- **Code Documentation**
+  - Added detailed docstrings to all class methods
+  - Included module-level documentation for better code understanding
+  - Added descriptive comments for complex logic sections
+  - Documented class attributes and their purposes
+
+- **Game Objects**
+  - Added documentation for `DamagedMaintenanceDroid` class and its methods
+  - Documented `DiagnosticTool` and `EnergyCrystal` item behaviors
+  - Added usage notes for all game items
+
+### Changed
+- **Code Quality**
+  - Improved inline comments in `Player` class methods
+  - Enhanced method documentation with parameter and return value descriptions
+  - Standardized docstring format across all Python files
+  - Added type hints in method signatures
+
+- **Player Class**
+  - Documented player movement mechanics
+  - Added comments for inventory management methods
+  - Clarified score and hazard tracking system
+
+### Fixed
+- **Documentation**
+  - Corrected method documentation in `StationItem` class
+  - Fixed parameter descriptions in class initializers
+  - Ensured consistent documentation style across all files
 
 ## [0.2.0] - 2025-06-13
 

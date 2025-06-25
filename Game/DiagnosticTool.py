@@ -1,4 +1,5 @@
 from StationItem import StationItem
+"""Found in the maintenance Tunnels and used to Remove the Droid."""
 
 class DiagnosticTool(StationItem):
     def __init__(self, name, description):

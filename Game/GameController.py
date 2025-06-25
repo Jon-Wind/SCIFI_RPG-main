@@ -56,7 +56,7 @@ class GameController:
             print("\n" + "-" * 50)
             command = input("What would you like to do? (type 'list' for commands):\n> ").strip()
             
-            if command.lower() == 'clear':
+            if command.lower() == 'describe':
                 clear_screen()
                 self.display_header()
                 self.player.location.describe()
@@ -79,6 +79,7 @@ class GameController:
             if command == "list":
                 print("\nAvailable Commands:")
                 print("-" * 20)
+                print("- 'describe' - Describe the current location")
                 print("- 'move <direction>' - Move in a direction (e.g., 'move east')")
                 print("- 'pick up tool' - Pick up the diagnostic tool")
                 print("- 'use tool' - Use the diagnostic tool on a droid")
@@ -88,7 +89,7 @@ class GameController:
             
             elif command.startswith("move "):
                 direction = command[5:].strip()
-                if direction in ["north", "south", "east", "west"]:
+                if direction in ["north", "south", "east", "west"]: #Only Directions
                     if direction in self.player.location.exits:
                         self.player.move(direction)
                     else:
@@ -96,18 +97,19 @@ class GameController:
                 else:
                     print("Please specify a valid direction: north, south, east, or west")
             
-            elif command == "pick up tool":
-                if not self.player.pick_up_tool():
+            
+            elif command == "pick up tool": #Score is given for picking up the tool
+                if not self.player.pick_up_tool(): #
                     print("There is no tool here to pick up.")
             
-            elif command == "use tool":
+            elif command == "use tool": #More score
                 self.player.use_tool_on_droid()
             
-            elif command == "pick up crystal":
+            elif command == "pick up crystal": #Score is given for picking up
                 if not self.player.pick_up_crystal():
                     print("There is no crystal here to pick up.")
             
-            elif command == "status":
+            elif command == "status": #Displays current status
                 print(self.player.get_status())
             
             elif command == "win":
@@ -116,16 +118,16 @@ class GameController:
             else:
                 print("Invalid command. Type 'list' for available commands.")
                 
-        except Exception as e:
+        except Exception as e: #Occurs if command is invalid
             print(f"An error occurred: {e}")
 
     def check_win_condition(self):
         if self.player.location == self.docking_bay and self.player.has_crystal:
-            self.player.score += 30
+            self.player.score += 30 #Final score adds to 110
             print("\n You have won the game!")
             print(f"Your final score is: {self.player.score} Hazards: {self.player.hazard_count}")
             return True
-        return False
+        return False #Game is Over
 
 
 
