@@ -44,13 +44,24 @@ class GameController:
         print("=" * 50)
         print(f"SCIFI RPG - Current Location: {self.player.location.name}".center(50))
         print("=" * 50)
+    
+    def player_name(self):
+        while True:
+            name = input("Please enter your name: ")
+            if name.strip():
+                self.player.name = name
+                clear_screen()
+                break
+            else:
+                print("Please enter a valid name.")
 
-    def start_game(self):
+    def start_game(self): #Main Game Loop
         clear_screen()
-        print('\n' + ' ' * 15 + 'WELCOME TO THE SCI-FI RPG GAME!\n')
+        self.player_name()
+        print('\n' + ' ' * 15 + f'WELCOME TO THE SCI-FI RPG GAME!\n\nAGENT DESIGINATION [{self.player.name}]')
         self.display_header()
         self.player.location.describe()
-        
+
         game_over = False
         while not game_over:
             print("\n" + "-" * 50)

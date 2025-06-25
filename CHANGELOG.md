@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.1] - 2025-06-25
+
+### Added
+- **Location System**
+  - Enhanced location descriptions and interactions
+  - Improved location connection handling
+
+### Updated
+- **Game Items**
+  - Refactored EnergyCrystal and DamagedMaintenanceDroid classes
+  - Improved item interaction logic in the game world
+
+### Fixed
+- **Player Mechanics**
+  - Addressed issues with player movement between locations
+  - Fixed interaction bugs with game items
+
 ## [0.4.0] - 2025-06-20
 
 ### Added
