@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.3] - 2025-07-03
+
+### Added
+- **Droid Behavior**
+  - Enhanced the DamagedMaintenanceDroid with interactive dialogue
+  - The droid now communicates with the player when interacted with
+  - Added descriptive messages for when the droid is blocking or repaired
+
+
 ## [0.4.2] - 2025-07-03
 
 ### Added

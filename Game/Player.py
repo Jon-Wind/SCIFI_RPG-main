@@ -38,6 +38,7 @@ class Player:
             print("There is no droid here to use the tool on.")
             return False
         self.location.droid_present = False
+        self.location.droid.repair()
         print("You use the diagnostic tool on the droid. It powers down!")
         self.score += 20
         return True

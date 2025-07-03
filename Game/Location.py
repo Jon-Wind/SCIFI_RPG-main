@@ -1,4 +1,4 @@
-
+from damagedmaintenancedroid import DamagedMaintenanceDroid
 
 class Location:
     def __init__(self, name, description, exits, has_tool=False, has_crystal=False, droid_present=False):
@@ -8,6 +8,7 @@ class Location:
         self.has_tool = has_tool
         self.has_crystal = has_crystal
         self.droid_present = droid_present
+        self.droid = DamagedMaintenanceDroid()
     
     def add_exit(self, direction, other_location):
         self.exits[direction] = other_location
