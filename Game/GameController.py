@@ -1,10 +1,11 @@
 import os
 import platform
-from Location import Location
-from DamagedMaintenanceDroid import DamagedMaintenanceDroid
-from Player import Player
-from DiagnosticTool import DiagnosticTool
-from EnergyCrystal import EnergyCrystal
+import time
+from location import Location
+from damagedmaintenancedroid import DamagedMaintenanceDroid
+from player import Player
+from diagnostic_tool import DiagnosticTool
+from energycrystal import EnergyCrystal
 
 def clear_screen():
     """Clear the console screen in a cross-platform way"""
@@ -44,6 +45,7 @@ class GameController:
         print("=" * 50)
         print(f"SCIFI RPG - Current Location: {self.player.location.name}".center(50))
         print("=" * 50)
+        time.sleep(1)
     
     def player_name(self):
         while True:
@@ -139,11 +141,4 @@ class GameController:
             print(f"Your final score is: {self.player.score} Hazards: {self.player.hazard_count}")
             return True
         return False #Game is Over
-
-
-
-test = GameController()
-
-test.setup_world()
-test.start_game()
     

@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.4.2] - 2025-07-03
+
+### Added
+- **Project Structure**
+  - Reorganized project files into proper Python package structure
+  - Added `__init__.py` files to make the Game directory a proper Python package
+  - Created a proper `main.py` entry point
+
+### Changed
+- **Code Organization**
+  - Moved game controller logic to `GameController` class
+  - Updated import statements to use absolute imports
+  - Restructured item classes for better modularity
+
+### Fixed
+- **Imports**
+  - Fixed module import issues between game components
+  - Resolved circular import dependencies
+  - Fixed case sensitivity in import statements
+
+
 ## [0.4.1] - 2025-06-25
 
 ### Added

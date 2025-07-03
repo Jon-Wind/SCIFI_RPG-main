@@ -1,4 +1,4 @@
-To play the game Open up GameController.py and run it.
+To play the game Open up main.py in the Game folder and run it.
 
 CONSTANTS: Keeps all the Story Data that can be easily changed in later verisons. With details like the names of the locations, items all being stored in Constants and being able to be changed.
 
