@@ -9,5 +9,6 @@ class EnergyCrystal(StationItem):
     
     def examine(self):
         print(f"{self.description}")
+        return True
 
 

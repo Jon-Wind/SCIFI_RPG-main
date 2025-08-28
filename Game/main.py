@@ -14,7 +14,7 @@ def main():
         print(f"An unexpected error occurred: {e}")
         print("The game will now exit.")
     finally:
-        print("\nThank you for playing the WELCOME TO THE SCI-FI RPG game!")
+        print("\nThank you for playing the THE SCI-FI RPG game!")
 
 if __name__ == "__main__":
     main()

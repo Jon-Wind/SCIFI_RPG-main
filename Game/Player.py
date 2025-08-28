@@ -18,8 +18,6 @@ class Player:
             print("The droid has blocked your path.")
             self.location.describe()
             self.hazard_count += 1 #Shown at the end of the game
-        else:
-            print("You cannot move in that direction.")
 
     def pick_up_tool(self): #Can only be done if there is a Tool in the room.
         if self.location.remove_tool():

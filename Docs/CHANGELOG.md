@@ -115,7 +115,7 @@
 - **Improved** location descriptions for better scalability
 - **Updated** game controller with core functionality
 
-## [0.2.0] - 2025-06-13
+## [0.2.0] - 2025-06-9
 
 ### Major Changes
 
